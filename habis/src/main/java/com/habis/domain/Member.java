@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
-
+//v 6565
 // jpa가 이 클래스를 DB와 매핑할 대상으로 인식하게 하는 어노테이션입니다~
 @Entity
 // 테이블 명을 "members로 명시적 지정
