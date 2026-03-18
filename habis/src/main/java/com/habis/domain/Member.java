@@ -4,9 +4,14 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+
+// jpa가 이 클래스를 DB와 매핑할 대상으로 인식하게 하는 어노테이션입니다~
 @Entity
+// 테이블 명을 "members로 명시적 지정
 @Table(name = "members")
+// lombok으로 모든 필드의 getter 생성
 @Getter
+
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
 @AllArgsConstructor
@@ -121,10 +126,12 @@ public class Member {
     // ENUM
     // -----------------------------------------------
 
+    //이건 가입자의 권한을 나타냅니다. 일반회원, 프리미엄 회원, 강의자, 관리자
     public enum Role {
         USER, PREMIUM, INSTRUCTOR, ADMIN
     }
 
+    // 이건 회원 상태 활성, 비활성(탈퇴, 비활성), 차단
     public enum Status {
         ACTIVE, INACTIVE, BANNED
     }
